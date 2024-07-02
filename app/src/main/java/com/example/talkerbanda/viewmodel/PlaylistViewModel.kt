@@ -23,11 +23,11 @@ class PlaylistViewModel : ViewModel() {
     private fun loadTracks() {
         // Пример загрузки треков с указанием ресурсных ID аудиофайлов из папки res/raw
         _tracks.value = listOf(
-            Track("I Got You", "Toxi$", R.raw.track1),
-            Track("Еще один день", "Мот", R.raw.track2),
-            Track("Юморист", "Face", R.raw.track3),
-            Track("Это любовь", "Скриптонит", R.raw.track4),
-            Track("I Got Love", "Мияги, Рем Дигга", R.raw.track5),
+            Track("Justice", "WithoutAuthor", R.raw.track1),
+            Track("Battle", "WithoutAuthor", R.raw.track2),
+            Track("Best", "WithoutAuthor", R.raw.track3),
+            Track("Back", "WithoutAuthor", R.raw.track4),
+            Track("Village", "WithoutAuthor", R.raw.track5),
             // Добавьте здесь другие треки, указывая соответствующие ресурсные ID
         )
     }
