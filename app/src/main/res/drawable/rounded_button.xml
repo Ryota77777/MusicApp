@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="20dp" /> <!-- Установите желаемый радиус скругления -->
+    <solid android:color="@color/white" /> <!-- Замените на ваш цвет кнопки -->
+</shape>

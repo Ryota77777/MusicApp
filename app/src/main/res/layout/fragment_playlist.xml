@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.talkerbanda.viewmodel.PlaylistViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".playlist.PlaylistFragment">
+
+        <!-- Поисковая строка -->
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Поиск"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:padding="10dp"
+            android:background="@drawable/search_background"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Заголовок плейлиста с иконкой -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_bar"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_media_play"
+                android:contentDescription="Иконка музыки"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ваш плейлист"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- RecyclerView для списка треков -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/playlist_list"
+            android:layout_width="wrap_content"
+            android:layout_height="612dp"
+            android:layout_below="@id/search_bar"
+            android:layout_marginTop="36dp"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/playlist_item" />
+    </RelativeLayout>
+</layout>
+
+
+
+
+
+
+
+
+
+
